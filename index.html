@@ -1,102 +1,102 @@
 <!doctype html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Roope Merikukka – Human</title>
-	<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Roope Merikukka – Human</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0" />
   <style>
-		html, body {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			color: #333;
-			font-weight: normal;
-			line-height: 1.6rem;
-			position: relative;
-		}
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+      font-weight: normal;
+      line-height: 1.6rem;
+      position: relative;
+    }
 
-		main {
-			max-width: 700px;
-			margin: 0 auto;
-			padding: 24px;
-			text-align: center;
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-		}
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-		h1 {
-			font-size: 4em;
-			letter-spacing: -0.06em;
-			margin: 0 0 0.2em;
-			line-height: 1em;
-		}
+    h1 {
+      font-size: 4em;
+      letter-spacing: -0.06em;
+      margin: 0 0 0.2em;
+      line-height: 1em;
+    }
 
-		svg {
-			display: none;
-		}
+    svg {
+      display: none;
+    }
 
-		.social-media {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			text-align: right;
-			position: absolute;
-			bottom: 24px;
-			right: 24px;
-		}
+    .social-media {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+    }
 
-		.social-media li {
-			display: inline-block;
-			margin-left: 12px;
-		}
+    .social-media li {
+      display: inline-block;
+      margin-left: 12px;
+    }
 
-		.social-media img {
-			width: 24px;
-			height: 24px;
-		}
+    .social-media img {
+      width: 24px;
+      height: 24px;
+    }
 
-		@media all and (max-width: 40em) {
-			h1 { font-size:3em; }
-		}
-	</style>
+    @media all and (max-width: 40em) {
+      h1 { font-size:3em; }
+    }
+  </style>
 </head>
 <body>
 
-	<main>
-		<h1>Hi, I&rsquo;m Roope, a web developer.</h1>
-	</main>
+  <main>
+    <h1>Hi, I&rsquo;m Roope, a web developer.</h1>
+  </main>
 
-	<ul class="social-media">
-		<li><a href="https://www.facebook.com/roope.merikukka"><img src="facebook.svg"></a></li>
-		<li><a href="https://github.com/roopemerikukka"><img src="github.svg"></a></li>
-		<li><a href="https://www.instagram.com/roopemerikukka/"><img src="instagram.svg"></a></li>
-		<li><a href="https://www.linkedin.com/in/roopemerikukka"><img src="linkedin.svg"></a></li>
-		<li><a href="https://twitter.com/roopemerikukka"><img src="twitter.svg"></a></li>
-	</ul>
+  <ul class="social-media">
+    <li><a href="https://www.facebook.com/roope.merikukka"><img src="facebook.svg"></a></li>
+    <li><a href="https://github.com/roopemerikukka"><img src="github.svg"></a></li>
+    <li><a href="https://www.instagram.com/roopemerikukka/"><img src="instagram.svg"></a></li>
+    <li><a href="https://www.linkedin.com/in/roopemerikukka"><img src="linkedin.svg"></a></li>
+    <li><a href="https://twitter.com/roopemerikukka"><img src="twitter.svg"></a></li>
+  </ul>
 
-	<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'>
-		<rect width='5' height='5' fill='#fff'/>
-		<rect width='1' height='1' fill='#ccc'/>
-	</svg>
+  <svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'>
+    <rect width='5' height='5' fill='#fff'/>
+    <rect width='1' height='1' fill='#ccc'/>
+  </svg>
 
-	<script>
-		function svgToBase64Image(svgElement) {
-			var div = document.createElement('div');
-			div.appendChild(svgElement.cloneNode(true));
-			var b64 = window.btoa(div.innerHTML);
-			return 'data:image/svg+xml;base64,' + b64;
-		}
-		var svgs = document.getElementsByTagName('svg');
-		console.log(svgs);
-		var urls = [];
-		for (var i = 0; i < svgs.length; i++)
-			urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
-		var url = urls.join(',');
-		document.body.style.background = url;
-	</script>
+  <script>
+    function svgToBase64Image(svgElement) {
+      var div = document.createElement('div');
+      div.appendChild(svgElement.cloneNode(true));
+      var b64 = window.btoa(div.innerHTML);
+      return 'data:image/svg+xml;base64,' + b64;
+    }
+    var svgs = document.getElementsByTagName('svg');
+    console.log(svgs);
+    var urls = [];
+    for (var i = 0; i < svgs.length; i++)
+      urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
+    var url = urls.join(',');
+    document.body.style.background = url;
+  </script>
 
 </body>
 </html>
