@@ -1,0 +1,23 @@
+name: 'Deploy'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Rsync
+        uses: burnett01/rsync-deployments@5.0
+        with:
+          switches: -avzr --delete
+          remote_path: ~/roo.pe/
+          remote_host: ${{ secrets.HOST }}
+          remote_port: ${{ secrets.PORT }}
+          remote_user: ${{ secrets.USERNAME }}
+          remote_key: ${{ secrets.KEY }}
