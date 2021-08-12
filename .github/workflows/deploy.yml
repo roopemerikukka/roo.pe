@@ -21,3 +21,24 @@ jobs:
           remote_port: ${{ secrets.PORT }}
           remote_user: ${{ secrets.USERNAME }}
           remote_key: ${{ secrets.KEY }}
+
+      - name: SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd ~/roo.pe/
+            docker stop roo.pe
+            docker rm roo.pe
+            docker run \
+              --name roo.pe \
+              --env VIRTUAL_HOST=roo.pe \
+              --env LETSENCRYPT_HOST=roo.pe \
+              --env LETSENCRYPT_EMAIL=roope.merikukka@gmail.com \
+              --restart=unless-stopped \
+              -v /home/roope/roo.pe:/usr/share/nginx/html:ro \
+              --network=nginx-proxy-network \
+              -d nginx
