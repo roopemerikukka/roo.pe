@@ -15,7 +15,7 @@ jobs:
       - name: Rsync
         uses: burnett01/rsync-deployments@5.0
         with:
-          switches: -avzr --delete
+          switches: -avzr --delete --exclude=".git/"
           remote_path: ~/roo.pe/
           remote_host: ${{ secrets.HOST }}
           remote_port: ${{ secrets.PORT }}
