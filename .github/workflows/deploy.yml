@@ -40,5 +40,4 @@ jobs:
               --env LETSENCRYPT_EMAIL=roope.merikukka@gmail.com \
               --restart=unless-stopped \
               -v /home/roope/roo.pe:/usr/share/nginx/html:ro \
-              --network=nginx-proxy-network \
               -d nginx
